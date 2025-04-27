@@ -66,7 +66,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Get In Touch</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-slate-700">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-slate-700">
             Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
@@ -81,31 +81,31 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-1 space-y-6"
           >
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6 flex items-start space-x-4">
                 <Mail className="h-6 w-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
+                  <h3 className="font-semibold mb-1 text-slate-700">Email</h3>
                   <p className="text-slate-700">arpitkhare33@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6 flex items-start space-x-4">
                 <Phone className="h-6 w-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
+                  <h3 className="font-semibold mb-1 text-slate-700" >Phone</h3>
                   <p className="text-slate-700">+91 8355882315</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6 flex items-start space-x-4">
                 <MapPin className="h-6 w-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">Location</h3>
+                  <h3 className="font-semibold mb-1 text-slate-700">Location</h3>
                   <p className="text-slate-700">Mumbai, India</p>
                 </div>
               </CardContent>
@@ -119,7 +119,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="md:col-span-2"
           >
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

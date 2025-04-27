@@ -47,7 +47,7 @@ export default function Publications() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Publications</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-blue-700">Publications</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-slate-700">My research contributions to academic conferences.</p>
         </motion.div>
@@ -61,13 +61,13 @@ export default function Publications() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full hover:shadow-lg transition-shadow">
+              <Card className="h-full hover:shadow-lg transition-shadow bg-white">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <BookOpen className="h-5 w-5 text-blue-600 mr-2" />
                     <Badge>{publication.year}</Badge>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{publication.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-700">{publication.title}</h3>
                   <p className="text-blue-600 font-medium mb-2">{publication.conference}</p>
                   <p className="text-slate-700 mb-4">{publication.authors}</p>
                   <a

@@ -105,10 +105,10 @@ export default function Projects() {
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.05, delay: 0.05 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Featured Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-slate-800">Featured Projects</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-slate-700">
             A selection of projects that showcase my technical skills and problem-solving abilities.
@@ -146,7 +146,7 @@ export default function Projects() {
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow bg-white">
                     <div className="aspect-video overflow-hidden">
                       <img
                         src={project.image || "/placeholder.svg"}
@@ -155,7 +155,7 @@ export default function Projects() {
                       />
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2 text-slate-800">{project.title}</h3>
                       <p className="text-slate-700 mb-4">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag, tagIndex) => (

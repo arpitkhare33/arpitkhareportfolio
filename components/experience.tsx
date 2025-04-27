@@ -90,7 +90,7 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Experience & Education</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-blue-700">Experience & Education</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-slate-700">My professional journey and educational background.</p>
         </motion.div>
@@ -99,7 +99,7 @@ export default function Experience() {
           <div>
             <div className="flex items-center mb-8">
               <Briefcase className="h-6 w-6 text-blue-600 mr-3" />
-              <h3 className="text-2xl font-bold">Work Experience</h3>
+              <h3 className="text-2xl font-bold text-blue-700">Work Experience</h3>
             </div>
 
             <div className="relative border-l-2 border-blue-200 pl-8 ml-3">
@@ -113,10 +113,10 @@ export default function Experience() {
                   className="mb-10 relative"
                 >
                   <div className="absolute -left-10 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
-                  <Card className="hover:shadow-md transition-shadow">
+                  <Card className="hover:shadow-md transition-shadow bg-white">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-semibold">{job.title}</h4>
+                        <h4 className="text-xl font-semibold text-blue-700">{job.title}</h4>
                         <Badge variant="outline">{job.period}</Badge>
                       </div>
                       <p className="text-blue-600 font-medium mb-3">{job.company}</p>
@@ -149,7 +149,7 @@ export default function Experience() {
           <div>
             <div className="flex items-center mb-8">
               <GraduationCap className="h-6 w-6 text-blue-600 mr-3" />
-              <h3 className="text-2xl font-bold">Education</h3>
+              <h3 className="text-2xl font-bold text-blue-700">Education</h3>
             </div>
 
             <div className="relative border-l-2 border-blue-200 pl-8 ml-3">
@@ -163,16 +163,16 @@ export default function Experience() {
                   className="mb-10 relative"
                 >
                   <div className="absolute -left-10 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
-                  <Card className="hover:shadow-md transition-shadow">
+                  <Card className="hover:shadow-md transition-shadow bg-white">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                        <h4 className="text-xl font-semibold text-blue-700">{edu.degree}</h4>
                         <Badge variant="outline">{edu.period}</Badge>
                       </div>
                       <p className="text-blue-600 font-medium mb-3">{edu.institution}</p>
                       <p className="text-slate-700 mb-4">{edu.description}</p>
 
-                      <h5 className="font-semibold mb-2">Achievements:</h5>
+                      <h5 className="font-semibold mb-2 text-blue-600">Achievements:</h5>
                       <ul className="space-y-1">
                         {edu.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start">

@@ -19,7 +19,7 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="max-w-3xl mx-auto text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4 text-blue-700">About Me</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
         </motion.div>
 
@@ -43,7 +43,7 @@ export default function About() {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Full-Stack Developer with Enterprise Experience</h3>
+            <h3 className="text-2xl font-bold mb-4 text-slate-800">Full-Stack Developer with Enterprise Experience</h3>
             <p className="text-slate-700 mb-4">
               With 3+ years of experience specializing in the MERN stack (MongoDB, Express.js, React.js, Node.js), I
               have a strong foundation in backend development, system integration, and automation.
@@ -59,10 +59,10 @@ export default function About() {
               high-performance web applications and delivering end-to-end solutions tailored to business needs.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
-              <span className="px-3 py-1 bg-slate-100 rounded-full text-sm">Problem Solver</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-full text-sm">Team Player</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-full text-sm">Adaptable</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-full text-sm">Time Management</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Problem Solver</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Team Player</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Adaptable</span>
+              <span className="px-3 py-1 bg-slate-800 rounded-full text-sm">Time Management</span>
             </div>
           </motion.div>
         </div>
