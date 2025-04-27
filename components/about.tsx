@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import Image from "next/image"
 
+import profilePhoto from "../components/images/arpit_professional.jpeg"
 export default function About() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -32,7 +34,13 @@ export default function About() {
             className="relative"
           >
             <div className="aspect-square rounded-lg overflow-hidden bg-slate-200">
-              <img src="/profile-photo.png" alt="Arpit Khare" className="object-cover w-full h-full" />
+            <Image 
+                src={profilePhoto} 
+                alt="Arpit Khare" 
+                className="object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 rounded-lg -z-10"></div>
           </motion.div>

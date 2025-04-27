@@ -8,13 +8,22 @@ import { Button } from "../components/ui/button"
 import { Badge } from "../components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { ExternalLink, Github } from "lucide-react"
-
+import Image from "next/image"
+import BasImage from "../components/images/bas.png"
+import MDMImage from "../components/images/mdm.jpg"
+import ChatbotImage from "../components/images/chatbot.jpg"
+import LDAPImage from "../components/images/ldap.jpg"
+import DLPImage from "../components/images/dlp.jpeg"
+import UdemyImage from "../components/images/udemy.jpeg"
+import CricketGPTImage from "../components/images/cricketgpt.jpeg"
+import WasteManagementImage from "../components/images/waste.jpg"
+import ProjectImage from "../components/images/project.jpeg"
 const projects = [
   {
     title: "Breach Attack Simulation Tool",
     description:
       "Developed a tool to automate red team tasks for Endpoint Assessment and Email Phishing Attacks, enhancing cybersecurity testing capabilities.",
-    image: "/project-1.png",
+    image: BasImage,
     tags: ["Node.js", "Express", "React", "Postfix", "Cybersecurity"],
     category: "security",
     github: "#",
@@ -24,17 +33,17 @@ const projects = [
     title: "Mobile Device Manager (MDM)",
     description:
       "Built an MDM solution for Android to manage Reliance Retail Stores POS Devices, successfully deployed across 1800 retail store devices.",
-    image: "/project-2.png",
-    tags: ["Java", "Node.js", "React", "Enterprise Solution"],
+    image: MDMImage,
+    tags: ["Java", "Node.js", "React", "Enterprise Solution", "IIS", "Nginx"],
     category: "fullstack",
     github: "#",
     demo: "#",
   },
   {
-    title: "Cybersecurity Policy Awareness Chatbot",
+    title: "Cybersecurity Awareness Chatbot",
     description:
       "Created an intelligent chatbot using LangChain and NLP, trained on organizational security policies to provide instant policy-related information.",
-    image: "/project-3.png",
+    image: ChatbotImage,
     tags: ["LangChain", "NLP", "Python", "AI", "Cybersecurity"],
     category: "nlp",
     github: "#",
@@ -43,7 +52,7 @@ const projects = [
   {
     title: "LDAP Authentication API",
     description: "Developed a RESTful API for LDAP authentication for devices with Reliance Active Directory.",
-    image: "/project-4.png",
+    image: LDAPImage,
     tags: ["Node.js", "Express", "LDAP", "Authentication", "REST API"],
     category: "fullstack",
     github: "#",
@@ -52,8 +61,8 @@ const projects = [
   {
     title: "DLP Integration Agent",
     description:
-      "Built a Python-based agent to capture and reconstruct outbound emails from packet data for DLP integration with Ironport and ZScaler.",
-    image: "/project-5.png",
+      "Built a Python agent to capture & reconstruct outbound emails from packet data for DLP integration with Ironport & ZScaler.",
+    image: DLPImage,
     tags: ["Python", "Cybersecurity", "Data Loss Prevention", "Network Security"],
     category: "security",
     github: "#",
@@ -62,7 +71,7 @@ const projects = [
   {
     title: "Learning Management System",
     description: "A Udemy-like portal where teachers can sell their video courses and students can attend lessons.",
-    image: "/project-6.png",
+    image: UdemyImage,
     tags: ["Flask", "React", "PostgreSQL", "Docker", "Nginx", "CI/CD"],
     category: "fullstack",
     github: "#",
@@ -72,7 +81,7 @@ const projects = [
     title: "Cricket GPT",
     description:
       "An LLM-powered chatbot designed to serve as an assistant for comprehending and analyzing cricket match summaries.",
-    image: "/project-7.png",
+    image: CricketGPTImage,
     tags: ["Python", "LLM", "React", "OpenAI", "NLP"],
     category: "nlp",
     github: "#",
@@ -81,7 +90,7 @@ const projects = [
   {
     title: "Waste Management Analytics Dashboard",
     description: "Developed an analytics dashboard for waste management using sentiment analysis techniques.",
-    image: "/project-8.png",
+    image: WasteManagementImage,
     tags: ["Python", "React", "Sentiment Analysis", "Data Visualization"],
     category: "fullstack",
     github: "#",
@@ -148,11 +157,25 @@ export default function Projects() {
                 >
                   <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow bg-white">
                     <div className="aspect-video overflow-hidden">
-                      <img
+                      {/* <img
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         className="object-cover w-full h-full transition-transform hover:scale-105"
-                      />
+                      /> */}
+                     <div className="relative w-full h-64">
+  <Image
+    src={project.image || ProjectImage}
+    alt={project.title}
+    fill
+    className="object-cover transition-transform hover:scale-105"
+    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  />
+</div>
+                      {/* <Image 
+                src={project.image || './placeholder.svg'} 
+                alt {project.title} 
+                className="object-cover w-full h-full transition-transform hover:scale-105"
+              /> */}
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-2 text-slate-800">{project.title}</h3>
@@ -328,10 +351,12 @@ export default function Projects() {
                 >
                   <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
-                      <img
+                    <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
-                        className="object-cover w-full h-full transition-transform hover:scale-105"
+                        fill
+                        className="object-cover transition-transform hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
                     <CardContent className="p-6">
