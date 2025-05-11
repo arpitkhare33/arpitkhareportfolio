@@ -58,12 +58,12 @@ export default function About() {
             </p>
             <p className="text-slate-700 mb-4">
               I have a proven track record in building scalable applications for enterprise environments, including
-              Breach Attack Simulation Systems, MDM systems, and RESTful APIs. I'm experienced in deploying and managing
+              Breach Attack Simulation Systems, MDM systems, and RESTful APIs. I am experienced in deploying and managing
               apps on both Linux and Windows servers using Docker, Nginx, and IIS.
             </p>
             <p className="text-slate-700 mb-4">
               My expertise extends to handling authentication (LDAP), chatbot development (LangChain, NLP), and
-              Python-based automation for data extraction and cybersecurity. I'm passionate about developing
+              Python-based automation for data extraction and cybersecurity. I am passionate about developing
               high-performance web applications and delivering end-to-end solutions tailored to business needs.
             </p>
             <div className="flex flex-wrap gap-2 mt-6">

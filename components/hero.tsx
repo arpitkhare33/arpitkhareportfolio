@@ -6,7 +6,7 @@ import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
-  const [scrollY, setScrollY] = useState(0)
+  const [, setScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
