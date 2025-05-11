@@ -267,11 +267,12 @@ export default function Projects() {
                 >
                   <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
-                      <img
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        className="object-cover w-full h-full transition-transform hover:scale-105"
-                      />
+                    <Image
+  src={project.image || "/placeholder.svg"}
+  alt={project.title}
+  className="object-cover w-full h-full transition-transform hover:scale-105"
+  layout="fill" // or use width/height
+/>
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -312,11 +313,12 @@ export default function Projects() {
                 >
                   <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="aspect-video overflow-hidden">
-                      <img
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        className="object-cover w-full h-full transition-transform hover:scale-105"
-                      />
+                    <Image
+  src={project.image || "/placeholder.svg"}
+  alt={project.title}
+  className="object-cover w-full h-full transition-transform hover:scale-105"
+  layout="fill" // or use width/height
+/>
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
