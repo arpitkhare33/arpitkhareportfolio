@@ -1,0 +1,14 @@
+server {
+        listen 80;
+        server_name arpitkhare.ddns.net;  # Replace with your domain or use _ for all
+
+        location / {
+            proxy_pass http://localhost:3000;  # or 3001 if you're using that
+            proxy_http_version 1.1;
+
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
